@@ -9,8 +9,13 @@
    <PROCESS-ITEM-OUTPUT ID="false:#{login.checkUser()}:login.xhtml"
     NAME="output1" PATH="login.xhtml" TARGET="rules:login.xhtml"
     TITLE="#{login.checkUser()}:false" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="false:#{login.signup()}:signup.xhtml"
+    NAME="output2" PATH="signup.xhtml" TARGET="rules:signup.xhtml"
+    TITLE="#{login.signup()}:false" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
  <PROCESS-ITEM NAME="rules:index.xhtml" PATH="index.xhtml"
   SHAPE="256,33,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:signup.xhtml" PATH="signup.xhtml"
+  SHAPE="272,209,0,0" model-entity="JSFProcessGroup"/>
 </PROCESS>

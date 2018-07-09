@@ -10,7 +10,7 @@ import javax.faces.event.ActionEvent;
 import org.primefaces.context.RequestContext;
 @ManagedBean(name = "login")
 @SessionScoped
-@Entity
+
 public class Login implements Serializable {
 
 	/**
@@ -37,12 +37,13 @@ public class Login implements Serializable {
 		this.password = password;
 	}
 
+	@SuppressWarnings("deprecation")
 	public void checkUser(ActionEvent event) {
 		RequestContext context = RequestContext.getCurrentInstance();
 		FacesMessage message = null;
 		boolean loggedIn = false;
 
-		if (username != null && username.equals("kullanici1") && password != null && password.equals("123456")) {
+		if (username != null && username.equals("admin") && password != null && password.equals("123")) {
 			loggedIn = true;
 			message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Welcome", username);
 		} else {
@@ -52,6 +53,10 @@ public class Login implements Serializable {
 
 		FacesContext.getCurrentInstance().addMessage(null, message);
 		context.addCallbackParam("loggedIn", loggedIn);
+	}
+	
+	public void signup() {
+		
 	}
 
 	public Login() {
