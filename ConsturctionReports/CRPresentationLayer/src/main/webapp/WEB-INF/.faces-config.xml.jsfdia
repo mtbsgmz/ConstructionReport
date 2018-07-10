@@ -9,9 +9,9 @@
    <PROCESS-ITEM-OUTPUT ID="false:#{login.checkUser()}:login.xhtml"
     NAME="output1" PATH="login.xhtml" TARGET="rules:login.xhtml"
     TITLE="#{login.checkUser()}:false" model-entity="JSFProcessItemOutput"/>
-   <PROCESS-ITEM-OUTPUT ID="false:#{login.signup()}:signup.xhtml"
+   <PROCESS-ITEM-OUTPUT ID="true:#{login.signup()}:signup.xhtml"
     NAME="output2" PATH="signup.xhtml" TARGET="rules:signup.xhtml"
-    TITLE="#{login.signup()}:false" model-entity="JSFProcessItemOutput"/>
+    TITLE="#{login.signup()}:true" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
  <PROCESS-ITEM NAME="rules:signup.xhtml" PATH="signup.xhtml"

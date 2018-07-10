@@ -20,7 +20,7 @@
 		</navigation-case>
 		<navigation-case>
 			<from-action>#{login.signup()}</from-action>
-			<from-outcome>false</from-outcome>
+			<from-outcome>true</from-outcome>
 			<to-view-id>signup.xhtml</to-view-id>
 			<redirect></redirect>
 		</navigation-case>

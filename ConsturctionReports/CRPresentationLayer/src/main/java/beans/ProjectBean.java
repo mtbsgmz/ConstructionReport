@@ -1,14 +1,18 @@
 package beans;
 
 import java.io.Serializable;
+import java.security.acl.Permission;
 import java.util.Calendar;
 import java.util.List;
 
+import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 
+import entities.Project;
 import entities.Report;
 import entities.Status;
+import service.ReportsService;
 
 @ManagedBean
 @RequestScoped
@@ -79,7 +83,22 @@ public class ProjectBean implements Serializable{
 	public void setReports(List<Report> reports) {
 		this.reports = reports;
 	}
+	@Override
+	public String toString() {
+		return "ProjectBean [name=" + name + ", cost=" + cost + ", manager=" + manager + ", STATUS=" + STATUS
+				+ ", location=" + location + ", baslangic=" + baslangic + ", bitis=" + bitis + ", account_id="
+				+ account_id + ", reports=" + reports + "]";
+	}
+	public void Save() {
+		System.out.println(toString());
+		Project project = new Project();
+		project.setName(getName());
+	}
+	
+/*	@PostConstruct
+	public void init() {
+		personService = new PersonService();
+	}*/
 	
 	
-
 }
