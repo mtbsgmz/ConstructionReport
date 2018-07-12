@@ -1,5 +1,6 @@
 package entities;
 import java.io.Serializable;
+import java.sql.Blob;
 import java.util.Calendar;
 import java.util.List;
 
@@ -44,6 +45,17 @@ public class Project implements Serializable {
 	private Long account_id;
 	@OneToMany
 	private List<Report> reports;
+	
+private String description;
+	
+
+	
+	public String getDescription() {
+	return description;
+}
+public void setDescription(String description) {
+	this.description = description;
+}
 	public Long getId() {
 		return id;
 	}
@@ -104,6 +116,7 @@ public class Project implements Serializable {
 	public void setReports(List<Report> reports) {
 		this.reports = reports;
 	}
+
 	
 	
 

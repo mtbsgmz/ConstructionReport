@@ -5,7 +5,7 @@
 	version="3.1">
 	<display-name>CRPresentationLayer</display-name>
 	<welcome-file-list>
-		<welcome-file>pcreate.xhtml</welcome-file>
+		<welcome-file>gep.xhtml</welcome-file>
 	</welcome-file-list>
 	<servlet>
 		<servlet-name>Faces Servlet</servlet-name>

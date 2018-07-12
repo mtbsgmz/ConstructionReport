@@ -2,6 +2,7 @@ package beans;
 
 import java.io.Serializable;
 import java.security.acl.Permission;
+import java.sql.Blob;
 import java.util.Calendar;
 import java.util.List;
 
@@ -28,7 +29,16 @@ public class ProjectBean implements Serializable{
 	private Calendar baslangic;
 	private Calendar bitis;
 	private Long account_id;	
+	private String description;
 	private List<Report> reports;
+	
+	
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
 	public String getName() {
 		return name;
 	}
