@@ -49,20 +49,28 @@
 					<p:commandButton value="Yükle" ajax="false"
 						actionListener="#{fileUploadView.upload}" disabled="true" />
 				</h:form>
+
+				<p:outputLabel value="Proje Durumu Seçin :" />
+				<p:selectOneButton value="#{selectOneView.option}">
+					<f:selectItem itemLabel=" Gelecek Proje" itemValue="GELECEK" />
+					<f:selectItem itemLabel="Devam Eden Proje" itemValue="DEVAMEDEN" />
+					<f:selectItem itemLabel="Bitmiş Proje" itemValue="BITMIS" />
+				</p:selectOneButton>
 				
 				<p:outputLabel value=" Proje Detayı:" />
-				 <p:inputTextarea rows="6" cols="33"  placeholder="Proje Detayı Varsa Yazınız..." 
-				 value="#{projectBean.description}"/>			
+				<p:inputTextarea rows="6" cols="33"
+					placeholder="Proje Detayı Varsa Yazınız..."
+					value="#{projectBean.description}" />
 			</p:panelGrid>
-			 <p:spacer />
-					<p:commandButton value="Proje Oluştur" action="#{projectBean.Save()}"
-						ajax="false"  class="btn btn-success btn-lg"  />
+			<p:spacer />
+			<p:commandButton value="Proje Oluştur" action="#{projectBean.Save()}"
+				ajax="false" class="btn btn-success btn-lg" />
 		</h:form>
 
 	</ui:define>
 
 </ui:composition>
-	<!--	
+<!--	
 					<p:outputLabel value="TC No:" />
 					<p:inputText id="tcno" placeholder="TC No Girin !" maxlength="11"
 						value="#{personBean.tc}" required="true"
