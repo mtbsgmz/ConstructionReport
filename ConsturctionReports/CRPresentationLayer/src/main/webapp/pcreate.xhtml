@@ -51,7 +51,7 @@
 				</h:form>
 
 				<p:outputLabel value="Proje Durumu Seçin :" />
-				<p:selectOneButton value="#{selectOneView.option}">
+				<p:selectOneButton value="#{projectBean.STATUS.name()}">
 					<f:selectItem itemLabel=" Gelecek Proje" itemValue="GELECEK" />
 					<f:selectItem itemLabel="Devam Eden Proje" itemValue="DEVAMEDEN" />
 					<f:selectItem itemLabel="Bitmiş Proje" itemValue="BITMIS" />

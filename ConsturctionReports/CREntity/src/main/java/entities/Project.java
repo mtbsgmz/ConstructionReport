@@ -16,6 +16,8 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Temporal;
 import static javax.persistence.TemporalType.DATE;
 import javax.persistence.OneToMany;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 
 @Entity
 @Table
@@ -42,14 +44,22 @@ public class Project implements Serializable {
 	@Temporal(DATE)
 	private Calendar bitis;
 	
-	private Long account_id;
-	@OneToMany
-	private List<Report> reports;
 	
-private String description;
+	@OneToOne
+	private Long account_id;
+
+	@OneToMany
+	private Long report_id;
+	
+ private String description;
 	
 
-	
+	public Long getReport_id() {
+	return report_id;
+}
+public void setReport_id(Long report_id) {
+	this.report_id = report_id;
+}
 	public String getDescription() {
 	return description;
 }
@@ -110,14 +120,6 @@ public void setDescription(String description) {
 	public void setAccount_id(Long account_id) {
 		this.account_id = account_id;
 	}
-	public List<Report> getReports() {
-		return reports;
-	}
-	public void setReports(List<Report> reports) {
-		this.reports = reports;
-	}
-
-	
-	
+		
 
 }

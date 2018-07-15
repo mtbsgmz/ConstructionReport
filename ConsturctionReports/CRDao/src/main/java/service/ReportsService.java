@@ -2,7 +2,7 @@ package service;
 
 import java.util.List;
 
-
+/*
 
 public class ReportsService {
 	ReportDAO reportDao = new ReportDAO();
@@ -20,6 +20,6 @@ public class ReportsService {
 	public List<Report> RaporGoster() {
 		return reportDao.readAll();
 	}
-}
+}*/
 
 }

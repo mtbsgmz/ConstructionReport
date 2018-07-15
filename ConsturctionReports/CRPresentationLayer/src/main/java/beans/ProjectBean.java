@@ -1,19 +1,13 @@
 package beans;
 
 import java.io.Serializable;
-import java.security.acl.Permission;
-import java.sql.Blob;
 import java.util.Calendar;
-import java.util.List;
 
-import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 
 import entities.Project;
-import entities.Report;
 import entities.Status;
-import service.ReportsService;
 
 @ManagedBean
 @RequestScoped
@@ -28,9 +22,9 @@ public class ProjectBean implements Serializable{
 	private String location;
 	private Calendar baslangic;
 	private Calendar bitis;
-	private Long account_id;	
+	private Long account_id;	//oturumun açıldığı account id proje oluşturulurken buraya set edilecek
 	private String description;
-	private List<Report> reports;
+
 	
 	
 	public String getDescription() {
@@ -87,17 +81,12 @@ public class ProjectBean implements Serializable{
 	public void setAccount_id(Long account_id) {
 		this.account_id = account_id;
 	}
-	public List<Report> getReports() {
-		return reports;
-	}
-	public void setReports(List<Report> reports) {
-		this.reports = reports;
-	}
+
 	@Override
 	public String toString() {
 		return "ProjectBean [name=" + name + ", cost=" + cost + ", manager=" + manager + ", STATUS=" + STATUS
 				+ ", location=" + location + ", baslangic=" + baslangic + ", bitis=" + bitis + ", account_id="
-				+ account_id + ", reports=" + reports + "]";
+				+ account_id + ", reports="  + "]";
 	}
 	public void Save() {
 		System.out.println(toString());
