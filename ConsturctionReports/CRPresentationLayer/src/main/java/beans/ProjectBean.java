@@ -3,11 +3,13 @@ package beans;
 import java.io.Serializable;
 import java.util.Calendar;
 
+import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 
 import entities.Project;
 import entities.Status;
+import service.ProjectService;
 
 @ManagedBean
 @RequestScoped
@@ -24,6 +26,7 @@ public class ProjectBean implements Serializable{
 	private Calendar bitis;
 	private Long account_id;	//oturumun açıldığı account id proje oluşturulurken buraya set edilecek
 	private String description;
+	private ProjectService projectService;
 
 	
 	
@@ -81,6 +84,11 @@ public class ProjectBean implements Serializable{
 	public void setAccount_id(Long account_id) {
 		this.account_id = account_id;
 	}
+	
+	@PostConstruct
+	public void init() {
+		projectService = new ProjectService();
+	}
 
 	@Override
 	public String toString() {
@@ -92,12 +100,18 @@ public class ProjectBean implements Serializable{
 		System.out.println(toString());
 		Project project = new Project();
 		project.setName(getName());
+		project.setBaslangic(getBaslangic());
+		project.setBitis(getBitis());
+		project.setManager(getManager());
+		project.setManager(getManager());
+		project.setLocation(getLocation());
+		project.setSTATUS(getSTATUS());
+		project.setDescription(getDescription());
+
+		
 	}
 	
-/*	@PostConstruct
-	public void init() {
-		personService = new PersonService();
-	}*/
+	
 	
 	
 }

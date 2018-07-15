@@ -20,6 +20,6 @@ public class ReportsService {
 	public List<Report> RaporGoster() {
 		return reportDao.readAll();
 	}
-}*/
-
 }
+
+}*/

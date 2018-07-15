@@ -3,6 +3,8 @@
 	<name>CRPresentationLayer</name>
 	<comment></comment>
 	<projects>
+		<project>CRDao</project>
+		<project>CREntity</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

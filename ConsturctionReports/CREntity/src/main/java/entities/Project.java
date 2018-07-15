@@ -1,8 +1,6 @@
 package entities;
 import java.io.Serializable;
-import java.sql.Blob;
 import java.util.Calendar;
-import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -15,9 +13,7 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Temporal;
 import static javax.persistence.TemporalType.DATE;
-import javax.persistence.OneToMany;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+
 
 @Entity
 @Table
@@ -28,7 +24,7 @@ public class Project implements Serializable {
 	
 	@Id
 	@SequenceGenerator(name = "PRO_SEQ", initialValue = 1, allocationSize = 1, sequenceName = "PRO_SEQ")
-	@GeneratedValue(generator="PROSEQ", strategy=GenerationType.SEQUENCE)
+	@GeneratedValue(generator="PRO_SEQ", strategy=GenerationType.SEQUENCE)
 	private Long id;
 	private String name;
 	private Double cost;
@@ -45,10 +41,10 @@ public class Project implements Serializable {
 	private Calendar bitis;
 	
 	
-	@OneToOne
+	//@OneToOne
 	private Long account_id;
 
-	@OneToMany
+	//@OneToMany
 	private Long report_id;
 	
  private String description;

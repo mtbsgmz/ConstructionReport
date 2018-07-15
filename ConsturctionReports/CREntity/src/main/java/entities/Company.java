@@ -1,22 +1,14 @@
 package entities;
 import java.io.Serializable;
-import java.sql.Blob;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Table;
 
-import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
-
-@Entity
-@Table
+//@Entity
+//@Table
 public class Company implements Serializable{
 
 
 	private static final long serialVersionUID = 1L;
-
+/*
 	@Id
 	@SequenceGenerator(name = "COMP_SEQ", initialValue = 1, allocationSize = 1, sequenceName = "COMP_SEQ")
 	@GeneratedValue(generator="PSEQ", strategy=GenerationType.SEQUENCE)
@@ -63,6 +55,6 @@ public class Company implements Serializable{
 		this.logo = logo;
 	}
 	
-	
+	*/
 	
 }
